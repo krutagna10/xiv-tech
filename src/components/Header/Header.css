@@ -10,8 +10,11 @@
   max-width: 9rem;
 }
 
-.header__nav-list {
-  --gap: 1.5rem;
+.header__nav-list,
+.header__btns-wrapper,
+.header__content {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .header__nav-toggle {
@@ -77,4 +80,25 @@
 
 .header__nav-link:hover {
   color: var(--blue);
+}
+
+.header__btns-wrapper {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .header__btns-wrapper {
+    display: flex;
+  }
+}
+
+.header__btn--search {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border: none;
+}
+
+.header__btn-cta {
+  padding-block: 0.15rem !important;
 }

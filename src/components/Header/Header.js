@@ -6,6 +6,7 @@ import { useState } from "react";
 import Backdrop from "../UI/Backdrop/Backdrop";
 import { IonIcon } from "@ionic/react";
 import { searchOutline } from "ionicons/icons";
+import Dropdown from "../Dropdown/Dropdown";
 
 function Header() {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
@@ -30,40 +31,42 @@ function Header() {
         >
           <span className="visually-hidden">Menu</span>
         </button>
-        <nav className="header__nav flex" aria-label="Primary">
-          <ul
-            id="header__nav-list"
-            className="header__nav-list flex flex--gap"
-            data-visible={isNavigationOpen}
-          >
-            <li>
-              <Link className="header__nav-link" to="/">
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link className="header__nav-link" to="/">
-                Careers
-              </Link>
-            </li>
-            <li>
-              <Link className="header__nav-link" to="/">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link className="header__nav-link" to="/">
-                Contact
-              </Link>
-            </li>
-          </ul>
-          <div className="header__btns-wrapper">
-            <button className="header__search-btn">
+        <div className="header__content flex--align-center">
+          <nav className="header__nav" aria-label="Primary">
+            <ul
+              id="header__nav-list"
+              className="header__nav-list"
+              data-visible={isNavigationOpen}
+            >
+              <li>
+                <Dropdown />
+              </li>
+              <li>
+                <Link className="header__nav-link" to="/">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link className="header__nav-link" to="/">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link className="header__nav-link" to="/">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <div className="header__btns-wrapper flex--align-center">
+            <button className="header__btn header__btn--search">
               <IonIcon icon={searchOutline} />
             </button>
-            <button className="header__btn btn btn--light">Let's talk</button>
+            <button className="header__btn header__btn-cta btn btn--light">
+              Let's talk
+            </button>
           </div>
-        </nav>
+        </div>
         {isNavigationOpen && <Backdrop />}
       </Container>
     </header>

@@ -18,7 +18,7 @@ function Footer() {
           </Link>
         </div>
         <nav className="footer__nav">
-          <ul className="footer__nav-list flex flex--gap">
+          <ul className="footer__nav-list flex gap">
             <li>
               <Link className="footer__nav-link" to="/products">
                 Products
@@ -36,7 +36,7 @@ function Footer() {
             </li>
           </ul>
         </nav>
-        <ul className="footer__social-list flex flex--gap">
+        <ul className="footer__social-list flex gap">
           <li>
             <Link
               className="footer__social-link"

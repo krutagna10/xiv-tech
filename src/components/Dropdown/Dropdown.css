@@ -1,0 +1,22 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown__btn {
+  --gap: 0.35rem;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.dropdown__list {
+  position: absolute;
+  top: 100%;
+  border: 1px solid black;
+  left: -50%;
+  width: 200%;
+  z-index: 99;
+  background-color: var(--white);
+}

@@ -7,6 +7,8 @@
   --font-weight-regular: 400;
   --font-weight-medium: 500;
 
+  /* Breakpoints */
+
   /* Font Sizes */
   --font-size-500: clamp(2rem, 1rem + 3vw, 2.75rem);
   --font-size-400: 1.75rem;
@@ -148,7 +150,7 @@ body {
   display: flex;
 }
 
-.flex--gap {
+.gap {
   gap: var(--gap);
 }
 
@@ -172,10 +174,6 @@ body {
 /* Grid Utility Class */
 .grid {
   display: grid;
-}
-
-.grid--gap {
-  gap: var(--gap);
 }
 
 .grid--content-center {
