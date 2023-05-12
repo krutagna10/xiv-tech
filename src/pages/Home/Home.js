@@ -1,36 +1,37 @@
 import Layout from "../../layout/Layout";
-import Container from "../../components/UI/Container/Container";
-import heroImage from "../../assets/home/hero-image.jpg";
+import robotImage from "../../assets/robot-image.jpg";
+import data from "./data";
 import Section from "../../components/UI/Section/Section";
+import Container from "../../components/UI/Container/Container";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
   return (
     <Layout>
       <Section className="hero-section">
-        <Container className="hero flow">
-          <div className="hero__content flow">
-            <span className="hero__heading-label">
-              Bot, Process, Efficiency
-            </span>
-            <h1 className="hero__heading">
-              Robotic Process Automation that unifies people, process and
-              technology
-            </h1>
-            <p className="hero__description">
-              We help business leaders embrace AI-Powered Automation as they
-              endeavor to visualize the future.
-            </p>
+        <Container className="hero">
+          <h1>Let's Collaborate</h1>
+          <div className="hero__cards">
+            {data.map((item, index) => (
+              <div className="card grid" key={index}>
+                <div className="card__content">
+                  <h3 className="card__heading">{item.title}</h3>
+                  <p className="card__description">{item.description}</p>
+                  <Link className="card__link" to={item.linkPath}>
+                    {item.linkText} ->
+                  </Link>
+                </div>
+                <div className="card__image-wrapper">
+                  <img
+                    className="card__image"
+                    src={item.image}
+                    alt={item.alt}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="hero__image-wrapper">
-            <img src={heroImage} alt="girl reading from a board" />
-          </div>
-        </Container>
-      </Section>
-      <Section className="process-section">
-        <Container className="process">
-          <span className="process__heading-label">Our Proven Process</span>
-          <h2>Align Design Refine</h2>
         </Container>
       </Section>
     </Layout>

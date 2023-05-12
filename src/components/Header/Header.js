@@ -1,5 +1,5 @@
 import Container from "../UI/Container/Container";
-import logo from "../../assets/shared/logo-dark.svg";
+import logo from "../../assets/logo-dark.svg";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { useState } from "react";
@@ -7,6 +7,7 @@ import Backdrop from "../UI/Backdrop/Backdrop";
 import { IonIcon } from "@ionic/react";
 import { searchOutline } from "ionicons/icons";
 import Dropdown from "../Dropdown/Dropdown";
+import Button from "../UI/Button/Button";
 
 function Header() {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
@@ -62,9 +63,9 @@ function Header() {
             <button className="header__btn header__btn--search">
               <IonIcon icon={searchOutline} />
             </button>
-            <button className="header__btn header__btn-cta btn btn--light">
+            <Button className="header__btn header__btn-cta btn--light">
               Let's talk
-            </button>
+            </Button>
           </div>
         </div>
         {isNavigationOpen && <Backdrop />}
