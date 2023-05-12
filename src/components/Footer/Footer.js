@@ -12,61 +12,59 @@ function Footer() {
   return (
     <footer className="footer">
       <Container className="footer__container grid grid--items-center">
-        <div className="footer__logo-wrapper">
+        <div className="footer__column">
           <Link to="/">
             <img className="footer__logo" src={logo} alt="Rural Art" />
           </Link>
+          <p className="footer__description">
+            By leveraging our full spectrum strategy, design, and technology
+            capabilities, we deliver game-changing outcomes for our clients
+            around the world.
+          </p>
         </div>
-        <nav className="footer__nav">
-          <ul className="footer__nav-list flex gap">
-            <li>
-              <Link className="footer__nav-link" to="/products">
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link className="footer__nav-link" to="/contact">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link className="footer__nav-link" to="/login">
-                Login
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <ul className="footer__social-list flex gap">
-          <li>
-            <Link
-              className="footer__social-link"
-              to="https://www.facebook.com/"
-            >
-              <IonIcon className="footer__social-icon" icon={logoFacebook} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="footer__social-link"
-              to="https://www.instagram.com/"
-            >
-              <IonIcon icon={logoInstagram} />
-            </Link>
-          </li>
-          <li>
-            <Link className="footer__social-link" to="/https://twitter.com">
-              <IonIcon icon={logoTwitter} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="footer__social-link"
-              to="https://in.pinterest.com/"
-            >
-              <IonIcon icon={logoPinterest} />
-            </Link>
-          </li>
-        </ul>
+        <div className="footer__column">
+          <p>Locations</p>
+          <p>Toronto</p>
+          <p>New Delhi</p>
+        </div>
+        <div className="footer__column">
+          <Link to="/">Services</Link>
+          <nav className="footer__nav">
+            <ul className="footer__nav-list">
+              <li>
+                <Link to="/">Complete AI + RPA Automation</Link>
+              </li>
+              <li>
+                <Link to="/">Cloud Services</Link>
+              </li>
+              <li>
+                <Link to="/">Delivery Pipeline Automation</Link>
+              </li>
+              <li>
+                <Link to="/">Simplify Cloud Ops</Link>
+              </li>
+              <li>
+                <Link to="/">Build Better Apps</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="footer__column">
+          <p>XivTech</p>
+          <nav className="footer__nav">
+            <ul className="footer__nav-list">
+              <li>
+                <Link to="/">About</Link>
+              </li>
+              <li>
+                <Link to="/">Careers</Link>
+              </li>
+              <li>
+                <Link to="/">Contact</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </Container>
     </footer>
   );

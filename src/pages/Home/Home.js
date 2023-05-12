@@ -1,5 +1,4 @@
 import Layout from "../../layout/Layout";
-import robotImage from "../../assets/robot-image.jpg";
 import data from "./data";
 import Section from "../../components/UI/Section/Section";
 import Container from "../../components/UI/Container/Container";
