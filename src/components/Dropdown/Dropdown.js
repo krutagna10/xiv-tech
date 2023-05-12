@@ -14,7 +14,7 @@ function Dropdown() {
     <div className="dropdown">
       <button
         onClick={toggleIsOpen}
-        className="dropdown__btn flex flex--align-center gap"
+        className="dropdown__btn flex flex--center gap"
       >
         Services
         <IonIcon icon={chevronDownOutline} />

@@ -2,3 +2,14 @@
 .hero-section {
   padding-block-start: 2rem !important;
 }
+
+.hero__heading {
+  font-size: var(--font-size-500);
+  line-height: 1.1;
+}
+
+/* Process Section */
+.process-section {
+  background-color: var(--very-dark);
+  color: var(--white);
+}
