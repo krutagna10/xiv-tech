@@ -1,13 +1,225 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* Font Family */
+  --font-space-mono: "Space Mono", monospace;
+  --font-open-sans: "Open Sans", sans-serif;
+
+  /* Font Weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* Font Sizes */
+  --font-size-500: clamp(2rem, 1rem + 3vw, 2.75rem);
+  --font-size-400: 1.75rem;
+  --font-size-300: 1.5rem;
+  --font-size-200: 1.25rem;
+  --font-size-100: 0.9375rem;
+
+  /* Colors */
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --black: #000;
+
+  /* Spacing */
+  --gap: 1rem;
+  --flow-space: 1.25rem;
+  --section-padding: clamp(3rem, 8vw, 6rem);
+
+  /* Border Radius*/
+  --border-radius-100: 0.75rem;
+
+  --letter-spacing-200: 0.3125em;
+  --letter-spacing-100: 0.125em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (min-width: 48em) {
+  :root {
+    --font-size-500: 3rem;
+    --font-size-400: 2.5rem;
+    --font-size-300: 0.875rem;
+    --font-size-100: 1rem;
+    --hero-padding: 5rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-space-mono);
+  font-size: var(--font-size-200);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+  position: relative;
+  color: var(--black);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utilities */
+.visually-hidden {
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Spacing */
+.flow > * + * {
+  margin-top: var(--flow-space);
+}
+
+/* Flex Utility Class */
+.flex {
+  display: flex;
+}
+
+.flex--gap {
+  gap: var(--gap);
+}
+
+.flex--justify-space {
+  justify-content: space-between;
+}
+
+.flex--align-center {
+  align-items: center;
+}
+
+.flex--justify-center {
+  justify-content: center;
+}
+
+.flex--center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid Utility Class */
+.grid {
+  display: grid;
+}
+
+.grid--gap {
+  gap: var(--gap);
+}
+
+.grid--content-center {
+  place-content: center;
+}
+
+.grid--items-center {
+  place-items: center;
+}
+
+/* Font Sizes */
+.font-size-500 {
+  font-size: var(--font-size-500);
+}
+
+.font-size-400 {
+  font-size: var(--font-size-400);
+}
+
+.font-size-300 {
+  font-size: var(--font-size-300);
+}
+
+.font-size-200 {
+  font-size: var(--font-size-200);
+}
+
+.font-size-100 {
+  font-size: var(--font-size-100);
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem;
 }
