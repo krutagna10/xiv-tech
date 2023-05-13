@@ -20,6 +20,5 @@
 @media (min-width: 48em) {
   .footer__container {
     grid-template-columns: repeat(4, 1fr);
-    place-items: center;
   }
 }

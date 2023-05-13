@@ -5,7 +5,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer grid grid--content-center">
       <Container className="footer__container grid">
         <div className="footer__column">
           <Link to="/">

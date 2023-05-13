@@ -1,7 +1,3 @@
-.list {
-  background-color: var(--white);
-}
-
 .list__link,
 .list__inner-link {
   color: var(--black);
@@ -25,14 +21,19 @@
 }
 
 @media (min-width: 48em) {
-  .list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
+  .dropdown__container {
     position: absolute;
     top: 102.5%;
     left: 0;
     width: 100%;
+    background-color: var(--white);
     padding-block: 3rem;
+  }
+
+  .list {
+    column-gap: 5rem;
+    row-gap: 2rem;
+
+    grid-template-columns: 1fr 1fr;
   }
 }
