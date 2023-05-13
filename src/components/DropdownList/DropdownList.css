@@ -1,0 +1,38 @@
+.list {
+  background-color: var(--white);
+}
+
+.list__link,
+.list__inner-link {
+  color: var(--black);
+}
+
+@media (max-width: 47.99em) {
+  .list__image-wrapper {
+    display: none;
+  }
+}
+
+.list__image {
+  width: 8rem;
+  height: 5rem;
+}
+
+@media (max-width: 47.99em) {
+  .list {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    position: absolute;
+    top: 102.5%;
+    left: 0;
+    width: 100%;
+    padding-block: 3rem;
+  }
+}

@@ -3,3 +3,23 @@
   color: var(--white);
   padding-block: var(--section-padding);
 }
+
+.footer__logo {
+  max-width: 8rem;
+}
+
+.footer__link {
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.footer__link:hover {
+  color: var(--blue);
+}
+
+@media (min-width: 48em) {
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+  }
+}

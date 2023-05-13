@@ -1,5 +1,4 @@
 .card {
-  border: 1px solid red;
   text-align: left;
 }
 
@@ -7,14 +6,21 @@
   width: 100%;
 }
 
+.card__description {
+  margin-bottom: 1.25rem;
+}
+
 @media (min-width: 48em) {
   .card {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "content image";
+    grid-template-areas:
+      "title image"
+      "content image";
   }
 
   .card__title {
     grid-area: title;
+    align-self: end;
   }
 
   .card__image-wrapper {
@@ -22,7 +28,6 @@
   }
 
   .card__content {
-    place-content: center;
     grid-area: content;
   }
 }

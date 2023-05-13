@@ -1,10 +1,14 @@
-.header__container {
-  padding-block: 0.75rem;
-  position: relative;
-  z-index: 99;
-  background-color: var(--white);
-  font-family: var(--font-open-sans);
+.header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative;
+  background-color: var(--white);
+  z-index: 99;
+}
+
+.header__container {
+  max-width: 100rem !important;
+  padding-block: 0.75rem;
+  font-family: var(--font-open-sans);
 }
 
 .header__link-logo {
@@ -76,7 +80,7 @@
   color: var(--black);
   transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
-  font-size: 18px;
+  font-size: var(--font-size-400);
 }
 
 .header__nav-link:hover {
@@ -101,5 +105,5 @@
 }
 
 .header__btn-cta {
-  padding-block: 0.15rem !important;
+  padding-block: 0.35rem !important;
 }

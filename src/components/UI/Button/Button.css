@@ -5,7 +5,7 @@
   border: none;
   border-radius: 0.25rem;
   white-space: nowrap;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
 }
 
 .btn--light {

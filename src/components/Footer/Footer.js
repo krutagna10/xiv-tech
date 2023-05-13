@@ -6,7 +6,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <Container className="footer__container grid grid--items-center">
+      <Container className="footer__container grid">
         <div className="footer__column">
           <Link to="/">
             <img className="footer__logo" src={logo} alt="Rural Art" />
@@ -17,45 +17,66 @@ function Footer() {
             around the world.
           </p>
         </div>
+
         <div className="footer__column">
-          <p>Locations</p>
+          <p className="font-size-300 font-bold">Locations</p>
           <p>Toronto</p>
           <p>New Delhi</p>
         </div>
+
         <div className="footer__column">
-          <Link to="/">Services</Link>
+          <Link className="footer__link font-size-300 font-bold" to="/">
+            Services
+          </Link>
           <nav className="footer__nav">
             <ul className="footer__nav-list">
               <li>
-                <Link to="/">Complete AI + RPA Automation</Link>
+                <Link className="footer__link" to="/">
+                  Complete AI + RPA Automation
+                </Link>
               </li>
               <li>
-                <Link to="/">Cloud Services</Link>
+                <Link className="footer__link" to="/">
+                  Cloud Services
+                </Link>
               </li>
               <li>
-                <Link to="/">Delivery Pipeline Automation</Link>
+                <Link className="footer__link" to="/">
+                  Delivery Pipeline Automation
+                </Link>
               </li>
               <li>
-                <Link to="/">Simplify Cloud Ops</Link>
+                <Link className="footer__link" to="/">
+                  Simplify Cloud Ops
+                </Link>
               </li>
               <li>
-                <Link to="/">Build Better Apps</Link>
+                <Link className="footer__link" to="/">
+                  Build Better Apps
+                </Link>
               </li>
             </ul>
           </nav>
         </div>
+
         <div className="footer__column">
-          <p>XivTech</p>
+          <p className="font-size-300 font-bold">XivTech</p>
           <nav className="footer__nav">
             <ul className="footer__nav-list">
               <li>
-                <Link to="/">About</Link>
+                <Link className="footer__link" to="/">
+                  About
+                </Link>
               </li>
               <li>
-                <Link to="/">Careers</Link>
+                <Link className="footer__link" to="/">
+                  Careers
+                </Link>
               </li>
               <li>
-                <Link to="/">Contact</Link>
+                <Link className="footer__link" to="/">
+                  Contact
+                </Link>
               </li>
             </ul>
           </nav>

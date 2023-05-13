@@ -4,6 +4,8 @@ import data from "./data";
 import { useState } from "react";
 import "./Dropdown.css";
 import { Link } from "react-router-dom";
+import Backdrop from "../UI/Backdrop/Backdrop";
+import DropdownList from "../DropdownList/DropdownList";
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,31 +18,17 @@ function Dropdown() {
     <div className="dropdown">
       <button
         onClick={toggleIsOpen}
-        className="dropdown__btn flex flex--center gap"
+        className={`dropdown__btn ${isOpen ? "bold" : ""}`}
       >
         Services
-        <IonIcon icon={chevronDownOutline} />
+        {isOpen ? (
+          <IonIcon icon={chevronUpOutline} />
+        ) : (
+          <IonIcon icon={chevronDownOutline} />
+        )}
       </button>
-      {isOpen && (
-        <ul className="dropdown__list flow">
-          {data.map((menu, index) => (
-            <li key={index}>
-              <Link className="dropdown__list-item font-bold" to="/">
-                {menu.mainCategory}
-              </Link>
-              <ul className="dropdown__inner-list font">
-                {menu.subCategories.map((subCategory) => (
-                  <Link to="/" key={index}>
-                    <li className="dropdown__inner-list-item" key={index}>
-                      {subCategory}
-                    </li>
-                  </Link>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      )}
+      {isOpen && <DropdownList data={data} />}
+      {isOpen && <Backdrop />}
     </div>
   );
 }

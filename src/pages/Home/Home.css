@@ -1,9 +1,15 @@
 .hero-section {
-  padding-block-start: 1.5rem;
+  padding-block-start: 3rem;
 }
 
 .hero__title {
   margin-bottom: 1.75rem;
+}
+
+@media (min-width: 48em) {
+  .hero__title {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .hero__cards {

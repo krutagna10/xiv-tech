@@ -10,7 +10,8 @@
   /* Breakpoints */
 
   /* Font Sizes */
-  --font-size-400: 2.25rem;
+  --font-size-500: 2.25rem;
+  --font-size-400: 1.6125rem;
   --font-size-300: 1.25rem;
   --font-size-200: 1rem;
   --font-size-100: 0.9375rem;
@@ -51,7 +52,8 @@
 
 @media (min-width: 48em) {
   :root {
-    --font-size-400: 2.5rem;
+    --font-size-500: 2.5rem;
+    --font-size-400: 1.25rem;
     --font-size-300: 1.5rem;
     --font-size-200: 1.125rem;
     --font-size-100: 1rem;
@@ -142,6 +144,10 @@ body {
 }
 
 /* Font Sizes */
+.font-size-500 {
+  font-size: var(--font-size-500);
+}
+
 .font-size-400 {
   font-size: var(--font-size-400);
 }

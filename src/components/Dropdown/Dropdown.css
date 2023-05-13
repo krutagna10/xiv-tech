@@ -1,21 +1,18 @@
-.dropdown {
-  position: relative;
-}
-
 .dropdown__btn {
-  --gap: 0.35rem;
+  --gap: 0.45rem;
 
   border: none;
   background: transparent;
   cursor: pointer;
-  font-size: 18px;
+  font-size: var(--font-size-400);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
 }
 
-.dropdown__list-item {
-  font-size: 18px;
-}
-
-.dropdown__list-item,
-.dropdown__inner-list-item {
-  color: var(--black);
+@media (max-width: 47.99em) {
+  .dropdown__btn.bold {
+    font-weight: var(--font-weight-bold);
+  }
 }
