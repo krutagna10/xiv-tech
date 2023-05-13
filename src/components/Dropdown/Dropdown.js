@@ -1,7 +1,9 @@
 import { IonIcon } from "@ionic/react";
 import { chevronUpOutline, chevronDownOutline } from "ionicons/icons";
+import data from "./data";
 import { useState } from "react";
 import "./Dropdown.css";
+import { Link } from "react-router-dom";
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,13 +22,23 @@ function Dropdown() {
         <IonIcon icon={chevronDownOutline} />
       </button>
       {isOpen && (
-        <ul className="dropdown__list">
-          <li>Complete AI + RPA</li>
-          <li>Automation</li>
-          <li>Cloud Services</li>
-          <li>Delivery Pipeline Automation</li>
-          <li>Simplify Cloud Ops</li>
-          <li>Build Better Apps</li>
+        <ul className="dropdown__list flow">
+          {data.map((menu, index) => (
+            <li key={index}>
+              <Link className="dropdown__list-item font-bold" to="/">
+                {menu.mainCategory}
+              </Link>
+              <ul className="dropdown__inner-list font">
+                {menu.subCategories.map((subCategory) => (
+                  <Link to="/" key={index}>
+                    <li className="dropdown__inner-list-item" key={index}>
+                      {subCategory}
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            </li>
+          ))}
         </ul>
       )}
     </div>

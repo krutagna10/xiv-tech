@@ -4,6 +4,7 @@
   z-index: 99;
   background-color: var(--white);
   font-family: var(--font-open-sans);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .header__link-logo {
@@ -21,11 +22,14 @@
   display: none;
 }
 
+.header__nav-list {
+  background-color: var(--white);
+}
+
 @media (max-width: 47.99em) {
   .header__nav-list {
     position: absolute;
-    background-color: var(--black);
-    top: 100%;
+    top: 102%;
     left: 0;
     right: 0;
     width: 100%;
@@ -35,6 +39,7 @@
     padding-inline: 2rem;
     transition: all 0.3s ease;
     z-index: 99;
+    padding-block: 3rem;
 
     /* Hiding Navigation */
     opacity: 0;
@@ -48,10 +53,6 @@
     pointer-events: auto;
     visibility: visible;
     transform: translateX(0%);
-  }
-
-  .header__nav-link {
-    color: var(--white) !important;
   }
 
   .header__nav-toggle {

@@ -1,12 +1,11 @@
+.hero-section {
+  padding-block-start: 1.5rem;
+}
+
+.hero__title {
+  margin-bottom: 1.75rem;
+}
+
 .hero__cards {
-}
-
-.card__image {
-  width: 100%;
-}
-
-@media (min-width: 48em) {
-  .card {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  --flow-space: 3.5rem;
 }

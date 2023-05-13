@@ -1,12 +1,7 @@
 import Container from "../UI/Container/Container";
-import "./Footer.css";
 import logo from "../../assets/logo-light.svg";
-import { logoFacebook } from "ionicons/icons";
-import { logoInstagram } from "ionicons/icons";
-import { logoTwitter } from "ionicons/icons";
-import { logoPinterest } from "ionicons/icons";
 import { Link } from "react-router-dom";
-import { IonIcon } from "@ionic/react";
+import "./Footer.css";
 
 function Footer() {
   return (

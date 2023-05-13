@@ -11,12 +11,11 @@
   font-size: 18px;
 }
 
-.dropdown__list {
-  position: absolute;
-  top: 100%;
-  border: 1px solid black;
-  left: -50%;
-  width: 200%;
-  z-index: 99;
-  background-color: var(--white);
+.dropdown__list-item {
+  font-size: 18px;
+}
+
+.dropdown__list-item,
+.dropdown__inner-list-item {
+  color: var(--black);
 }

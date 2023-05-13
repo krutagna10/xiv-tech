@@ -1,0 +1,38 @@
+.card {
+  border: 1px solid red;
+  text-align: left;
+}
+
+.card__image {
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "content image";
+  }
+
+  .card__title {
+    grid-area: title;
+  }
+
+  .card__image-wrapper {
+    grid-area: image;
+  }
+
+  .card__content {
+    place-content: center;
+    grid-area: content;
+  }
+}
+
+.card__link {
+  color: var(--blue);
+  transition: all 0.3s ease;
+  font-size: var(--font-size-200);
+}
+
+.card__link:hover {
+  color: var(--gray);
+}
