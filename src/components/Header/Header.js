@@ -13,11 +13,10 @@ import Button from "../UI/Button/Button";
 function Header() {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const navigationRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 256);
+      setIsSticky(window.scrollY > 224);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -32,10 +31,7 @@ function Header() {
   }
 
   return (
-    <header
-      ref={navigationRef}
-      className={`header ${isSticky ? "sticky" : ""}`}
-    >
+    <header className={`header ${isSticky ? "sticky" : ""}`}>
       <Container className="header__container flex flex--align-center flex--justify-space">
         <div className="header__link-wrapper">
           <Link className="header__link flex" to="/">
