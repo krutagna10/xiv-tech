@@ -3,6 +3,13 @@
   position: relative;
   background-color: var(--white);
   z-index: 99;
+  transition: all 0.3s ease;
+}
+
+.header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header__container {

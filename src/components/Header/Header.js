@@ -2,7 +2,7 @@ import Container from "../UI/Container/Container";
 import logo from "../../assets/logo-dark.svg";
 import icon from "../../assets/icon.svg";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Backdrop from "../UI/Backdrop/Backdrop";
 import { IonIcon } from "@ionic/react";
 import { searchOutline } from "ionicons/icons";
@@ -12,13 +12,30 @@ import Button from "../UI/Button/Button";
 
 function Header() {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const navigationRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 256);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   function toggleIsNavigationOpen() {
     setIsNavigationOpen((prevIsNavigationOpen) => !prevIsNavigationOpen);
   }
 
   return (
-    <header className="header">
+    <header
+      ref={navigationRef}
+      className={`header ${isSticky ? "sticky" : ""}`}
+    >
       <Container className="header__container flex flex--align-center flex--justify-space">
         <div className="header__link-wrapper">
           <Link className="header__link flex" to="/">
