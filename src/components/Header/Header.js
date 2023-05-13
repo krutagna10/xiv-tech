@@ -1,12 +1,13 @@
 import Container from "../UI/Container/Container";
 import logo from "../../assets/logo-dark.svg";
+import icon from "../../assets/icon.svg";
 import { Link } from "react-router-dom";
-import "./Header.css";
 import { useState } from "react";
 import Backdrop from "../UI/Backdrop/Backdrop";
 import { IonIcon } from "@ionic/react";
 import { searchOutline } from "ionicons/icons";
 import Dropdown from "../Dropdown/Dropdown";
+import "./Header.css";
 import Button from "../UI/Button/Button";
 
 function Header() {
@@ -20,8 +21,9 @@ function Header() {
     <header className="header">
       <Container className="header__container flex flex--align-center flex--justify-space">
         <div className="header__link-wrapper">
-          <Link to="/">
-            <img className="header__link-logo" src={logo} alt="Rural Art" />
+          <Link className="header__link flex" to="/">
+            <img className="header__link-icon" src={icon} alt="" />
+            <img className="header__link-logo" src={logo} alt="XIV Tech" />
           </Link>
         </div>
         <button

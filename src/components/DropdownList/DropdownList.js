@@ -4,14 +4,14 @@ import Container from "../UI/Container/Container";
 
 function DropdownList({ data }) {
   return (
-    <div className="dropdown__container grid grid--items-center">
+    <div className="dropdown__container grid">
       <ul className="list grid">
         {data.map((menu, index) => (
           <li className="list__item" key={index}>
             <Link className="list__link font-bold" to="/">
               {menu.mainCategory}
             </Link>
-            <div className="list__content flex">
+            <div className="list__content flex gap">
               <div className="list__image-wrapper">
                 <img className="list__image" src={menu.image} alt="" />
               </div>

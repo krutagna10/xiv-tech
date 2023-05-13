@@ -1,6 +1,12 @@
 .list__link,
 .list__inner-link {
   color: var(--black);
+  transition: all 0.3s ease;
+}
+
+.list__link:hover,
+.list__inner-link:hover {
+  color: var(--blue);
 }
 
 @media (max-width: 47.99em) {
@@ -10,8 +16,8 @@
 }
 
 .list__image {
-  width: 8rem;
-  height: 5rem;
+  width: 10rem;
+  height: 6rem;
 }
 
 @media (max-width: 47.99em) {
@@ -27,11 +33,14 @@
     left: 0;
     width: 100%;
     background-color: var(--white);
+    padding-inline: 1rem;
     padding-block: 3rem;
+    display: grid;
+    place-items: center;
   }
 
   .list {
-    column-gap: 5rem;
+    column-gap: clamp(2rem, 6vw, 5rem);
     row-gap: 2rem;
 
     grid-template-columns: 1fr 1fr;
